@@ -1,28 +1,9 @@
 $(document).ready(function() {
-    //Typing effect
-
-    var i = 0;
-    var txt = "I create and develop unique digital experiences through user-friendly websites.";
-    var container = document.getElementById('typeEffect');
-
-    function animate() {
-        // Check existence
-        if (typeof(container) != 'undefined' && container != null) {
-            if (i < txt.length) {
-                container.innerHTML += txt.charAt(i); // Iterate each character and increment
-                i++;
-                setTimeout(animate, 50)
-            }
-        } else {
-            return false;
-        }
-    };
-    animate();
 
     // Smooth scroll down
 
     $('#see-more').on('click', function() {
-        const about = $('#about-wrapper').position().top //Get the  position
+        const about = $('#services-wrapper').position().top //Get the  position
 
         $('html, body').animate({
             scrollTop: about
@@ -82,4 +63,5 @@ $(document).ready(function() {
         return ((top >= 0) && (window.innerHeight >= bottom));
 
     }
+
 });

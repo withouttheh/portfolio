@@ -7,7 +7,7 @@
 /* UPPERCASE COMMENTS INDICATE THE START OF A NEW PAGE */
 
 
-/* NORMAL CASE INDICATES COMMENTS INDICATES SUBSECTIONS OF A PAGE, */
+/* NORMAL CASE COMMENTS INDICATES SUBSECTIONS OF A PAGE */
 
 
 /* THE FOLLOWING STYLES APPLY TO THE INDEX PAGE */
@@ -538,7 +538,7 @@ footer img {
 #projects-wrapper li {
     padding: 1em 0;
     color: aliceblue;
-    height: 90vh;
+    height: 100vh;
     list-style-type: none;
 }
 
