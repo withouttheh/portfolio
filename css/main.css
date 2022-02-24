@@ -257,7 +257,7 @@ section li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: fadeInBtm 2s;
+    /* animation: fadeInBtm 2s; */
 }
 
 #about-wrapper {
@@ -296,6 +296,7 @@ h3 {
 #services-wrapper {
     background-color: #1f2833;
     height: 100vh;
+    animation: fadeInBtm 2s;
 }
 
 #about-wrapper>h3 {
@@ -554,7 +555,7 @@ footer img {
 
 .project {
     padding: 0 0 1em 0;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 h4 {

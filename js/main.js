@@ -28,7 +28,7 @@ $(document).ready(function() {
     // Scroll activated animation 
     var isScrolling = false
 
-    window.addEventListener("scroll", throttleScroll, false); // Attach event handler to scrolling
+    // window.addEventListener("scroll", throttleScroll, false); // Attach event handler to scrolling
 
     function throttleScroll(e) { // Throttle to 60fps
         if (isScrolling === false) {
@@ -40,7 +40,7 @@ $(document).ready(function() {
         isScrolling = true;
     }
 
-    document.addEventListener('DOMContentLoaded', scrolling, false);
+    // document.addEventListener('DOMContentLoaded', scrolling, false);
 
     var wrappers = document.querySelectorAll('.wrapper h3');
 
