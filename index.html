@@ -8,31 +8,39 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <title>Luto Sibotoboto | Developer</title>
+        <title>Luto Sibotoboto | Web Developer</title>
     </head>
     <body class="h-full font-display">
-        <div class="bg-pri h-full"> 
+        <div class="relative bg-pri h-full">   
         	<div class="h-screen">
             <header>
                 <div class="flex justify-between items-center p-8 bg-pri">
                     <div>
-                        <img class="h-8" src="./images/logo.png" />
-                    </div>
+                        <img class="h-8" src="images/logo.png" />
+                    </div> 
                     <div class="flex justify-between items-center lg:hidden">
                         <span class="px-4 text-xl font-medium tracking-wider"
                             >MENU</span
                         >
-                        <button class="h-5 w-5 space-y-2">
-                            <span class="block h-0.5 w-5 bg-black"></span>
-                            <span class="block h-0.5 w-5 bg-black"></span>
+                        <button class="h-5 w-5 space-y-2" id="burger">
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="top-bun"></span>
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="bottom-bun"></span> 
                         </button>
                     </div>
                     <nav class="hidden justify-between items-center lg:flex">
-                        <span class="px-4 text-xl font-medium tracking-wide">PROJECTS</span>
-                        <span class="px-4 text-xl font-medium tracking-wide">CONTACT</span>
+                        <span class="px-4 text-xl font-medium tracking-wide transition-all ease-in-out duration-500">PROJECTS</span>
+                        <span class="px-4 text-xl font-medium tracking-wide transition-all ease-in-out duration-500">CONTACT</span>
                     </nav>
                 </div>
             </header>
+            <nav class="absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-500" id="menu"> 
+            	<div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
+            		<ul class="text-center space-y-8">
+            			<li>PROJECTS</li>
+            			<li>CONTACT</li>
+            		</ul> 
+            	</div> 
+            </nav>
             <main class="h-full flex justify-center items-center ">
                 <div
                     class="p-8"
@@ -49,13 +57,13 @@
                                 East London, South Africa.
                             </p>
                         </div>
-                        <div>
+                        <!-- <div>
                             <button
                                 class="inline-block rounded-full py-2 px-4 bg-black text-white"
                             >
                                 See More
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </main>
