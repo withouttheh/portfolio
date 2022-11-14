@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <title>Luto Sibotoboto | Web Developer</title>
+    </head>
+	<body class="h-full font-display">
+        <div class="relative bg-pri h-full">   
+        	<div class="">
+            <header>
+                <div class="flex justify-between items-center p-8 bg-pri">
+                    <div>
+                        <img class="h-8" src="images/logo.png" />
+                    </div> 
+                    <div class="flex justify-between items-center lg:hidden">
+                        <span class="px-4 text-xl font-medium tracking-wider"
+                            >MENU</span
+                        >
+                        <button class="h-5 w-5 space-y-2" id="burger">
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="top-bun"></span>
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="bottom-bun"></span> 
+                        </button>
+                    </div>
+                    <nav class="hidden justify-between items-center lg:flex">
+                        <span class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="projects-link">PROJECTS</span>
+                        <span class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500"  id="contact-link">CONTACT</span>
+                    </nav>
+                </div>
+            </header>
+            <nav class="absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-500" id="menu"> 
+            	<div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
+            		<ul class="text-center space-y-8">
+                        <li id="projects-btn">HOME</li>
+            			<li id="projects-btn">PROJECTS</li>
+            			<li id="contact-btn">CONTACT</li>
+            		</ul> 
+            	</div> 
+            </nav>
+            <section>
+                <div
+                    class="text-sm p-8 space-y-8 md:w-8/12 md:mx-auto"
+                > 
+                    <div>    
+                        <h2 class="p-2 inline-block text-2xl border-b-2 border-gray-500">CUSTOMER CHURN</h2>
+                    </div>
+                    <div  class="space-y-4">
+                        <p>Businesses use customer churn analysis as one of their key business metrics because the cost of retaining an existing customer is far less than acquiring a new one.</p>
+                        <p>Churn = Percentage of existing customers who stop purchasing your products or services, often measured in a year.</p> 
+                        <p class="font-bold">How can data analytics help?</p>
+                        <p>Predicting when, why, and which customers will return or leave is a big challenge for many businesses. Predictive marketing can help flag customers who are at risk of leaving so that marketers can take proactive steps to retain these customers. Predictive analytics can also generate insights about loyalty-inducing behaviors that maximize customer lifetime value. Understanding the underlying customer patterns will greatly impact a business' ability to retain their customers. </p>
+                    </div>
+                    <div  class="space-y-4">  
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CASE STUDY: HOW CAN I HELP TO REDUCE CHURN AND INCREASE REVENUE?</h3>
+                        <p>For a telecommunications company, I have done an extensive analysis to help reduce churn. The telectommunications company wanted to know what causes customers to churn and whether one can know which customers are likely to churn.</p>
+                        <p>Out of a total of 7043 customers, 26.6% of them have churned over the analysis period. That is about 1900 customers.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-1/3" src="images/churn.png" />
+                        </div> 
+                    </div>
+                    <div  class="space-y-4">  
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500"> WHO IS CHURNING?</h3>
+                        <p>We identified some of the types customers who are likely to churn. We compare the churn rate with average monthly recurring revenue (MRR).</p>
+                        <p>A quick glance at the demographics and we can see that although seniors account for only 16% of the customers, they have a higher MRR and churn rate than those who are not seniors.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-1/3" src="images/senior pie churn.png" />
+                        </div> 
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/seniors churn.png" />
+                        </div> 
+                        <p>Gender does not seem to influence whether a customer will churn or not and both genders bring in similar average monthly revenue.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/gender churn.png" />
+                        </div>
+                        <p>More than half of the customer base are on month-to-month. This time of contract has a churn rate greater than 40%, meanwhile one-year contracts has less than 15% churn and two-year contracts has less than 5% churn.</p>
+                        <p>It is clear that the ease of ending a contract influences churn rate immensely and with month-to-month contracts being more than 50% of customers, this cannot be ignored.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-1/3" src="images/contract type.png" />
+                        </div>
+                         <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/contract churn.png" />
+                        </div>
+                    </div>
+                    <div  class="space-y-4">  
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">WHEN ARE THEY CHURNING?</h3>
+                        <p>The average customer tenure is 29 months. The churn rate is the highest (>40%) in the first five months with the first month reaching over 60% churn. The longer the customers stay, the lower their chances are of leaving.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/tenure dist.png" />
+                        </div>
+                        <div> 
+                            <img class="w-full m-auto md:w-2/3" src="images/tenure churn rate.png" />
+                        </div>
+                        <p>Customers with monthly charges higher than $65 are the most susceptible to churn. The company is losing more <span class="font-bold">valuable</span> customers.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/monthly charges churn rate.png" />
+                        </div>
+                    </div>
+                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span>  </p>
+                    <p>Do you want to know more about how data analysis can help you? <span class="border-b-2 border-gray-500 font-bold">Please get in touch with me</span></p>
+                </div>
+            </section>
+
+            <footer>
+            	<div class="flex flex-col justify-center items-center p-8 lg:flex-row">
+	                <div class="md:px-8">
+	                	<img class="inline h-6" src="images/icons/email.svg"><span> : lutosibotoboto@gmail.com</span>
+	                </div>
+	                <span>|</span>
+	                <div class="px-8"> 
+                		<span>&copy;<span class="year"></span> Luto Sibotoboto</span>
+	                </div>
+	            </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="js/main.js"></script> 
+
+	</body>
+</html>
