@@ -5,47 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="images/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <title>Luto Sibotoboto | Web Developer</title>
     </head>
-	<body class="h-full font-display">
-        <div class="relative bg-pri h-full">   
-        	<div class="">
+    <body class="h-full font-display">
+        <div class="relative h-full">   
+            <div class="">
             <header>
-                <div class="flex justify-between items-center p-8 bg-pri">
-                    <div>
+                <div class="flex justify-between items-center p-8">
+                    <div> 
                         <img class="h-8" src="images/logo.png" />
                     </div> 
                     <div class="flex justify-between items-center lg:hidden">
-                        <span class="px-4 text-xl font-medium tracking-wider"
+                       <!--  <span class="px-4 text-xl font-medium tracking-wider"
                             >MENU</span
                         >
                         <button class="h-5 w-5 space-y-2" id="burger">
                             <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="top-bun"></span>
                             <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="bottom-bun"></span> 
-                        </button>
+                        </button> -->
                     </div>
-                    <nav class="hidden justify-between items-center lg:flex">
-                        <span class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="projects-link">PROJECTS</span>
-                        <span class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500"  id="contact-link">CONTACT</span>
+                    <nav class="justify-between items-center lg:flex">
+                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="home-link" href="index.html">< BACK TO HOME</a>
+                      <!--  <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="projects-link">PROJECTS</a>
+                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500"  id="contact-link"  href="index.html">CONTACT</a> -->
                     </nav>
-                </div>
-            </header>
-            <nav class="absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-500" id="menu"> 
-            	<div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
-            		<ul class="text-center space-y-8">
-                        <li id="projects-btn">HOME</li>
-            			<li id="projects-btn">PROJECTS</li>
-            			<li id="contact-btn">CONTACT</li>
-            		</ul> 
-            	</div> 
-            </nav>
+                </div> 
+            </header> 
+           <!--  <nav class="absolute top-[96px] right-[-100vw] transition-all ease-in-out duration-500" id="menu"> 
+                <div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
+                    <ul class="text-center space-y-8">
+                        <li id="home-btn"><a href="index.html">HOME</a></li>
+                        <li id="projects-btn">PROJECTS</li>
+                        <li id="contact-btn">CONTACT</li>
+                    </ul> 
+                </div> 
+            </nav> -->
             <section>
                 <div
-                    class="text-sm p-8 space-y-8 md:w-8/12 md:mx-auto"
-                > 
+                    class="text-sm p-8 space-y-8 md:w-4/5 md:mx-auto lg:w-8/12"
+                >  
                     <div>    
                         <h2 class="p-2 inline-block text-2xl border-b-2 border-gray-500">CUSTOMER CHURN</h2>
                     </div>
@@ -77,7 +78,7 @@
                         <div>
                             <img class="w-full m-auto md:w-2/3" src="images/gender churn.png" />
                         </div>
-                        <p>More than half of the customer base are on month-to-month. This time of contract has a churn rate greater than 40%, meanwhile one-year contracts has less than 15% churn and two-year contracts has less than 5% churn.</p>
+                        <p>More than half of the customer base are on a month-to-month contract. This time of contract has a churn rate greater than 40%, meanwhile one-year contracts has less than 15% churn and two-year contracts has less than 5% churn.</p>
                         <p>It is clear that the ease of ending a contract influences churn rate immensely and with month-to-month contracts being more than 50% of customers, this cannot be ignored.</p>
                         <div>
                             <img class="w-full m-auto md:w-1/3" src="images/contract type.png" />
@@ -90,34 +91,33 @@
                         <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">WHEN ARE THEY CHURNING?</h3>
                         <p>The average customer tenure is 29 months. The churn rate is the highest (>40%) in the first five months with the first month reaching over 60% churn. The longer the customers stay, the lower their chances are of leaving.</p>
                         <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/tenure dist.png" />
-                        </div>
+                            <img class="w-full m-auto md:w-3/5" src="images/tenure dist.png" />
+                        </div> 
                         <div> 
                             <img class="w-full m-auto md:w-2/3" src="images/tenure churn rate.png" />
                         </div>
-                        <p>Customers with monthly charges higher than $65 are the most susceptible to churn. The company is losing more <span class="font-bold">valuable</span> customers.</p>
+                        <p>Customers with monthly charges higher than $65 are the most susceptible to churn. The company is losing more <span class="font-bold">valuable</span> customers. Interestingly enough, there's a slight increase in customer retention wwhen the monthly charges are between $65-$85.</p>
                         <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/monthly charges churn rate.png" />
-                        </div>
+                            <img class="w-full m-auto md:w-3/5" src="images/monthly charges churn rate.png" />
+                        </div> 
                     </div>
-                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span>  </p>
+                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span> </p>
                     <p>Do you want to know more about how data analysis can help you? <span class="border-b-2 border-gray-500 font-bold">Please get in touch with me</span></p>
                 </div>
             </section>
-
             <footer>
-            	<div class="flex flex-col justify-center items-center p-8 lg:flex-row">
-	                <div class="md:px-8">
-	                	<img class="inline h-6" src="images/icons/email.svg"><span> : lutosibotoboto@gmail.com</span>
-	                </div>
-	                <span>|</span>
-	                <div class="px-8"> 
-                		<span>&copy;<span class="year"></span> Luto Sibotoboto</span>
-	                </div>
-	            </div>
+                <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
+                    <div class="md:px-8">
+                        <img class="inline h-6" src="images/icons/email.svg"><span> : lutosibotoboto@gmail.com</span>
+                    </div>
+                    <span>|</span>
+                    <div class="px-8"> 
+                        <span>&copy;<span class="year"></span> Luto Sibotoboto</span>
+                    </div>
+                </div>
             </footer>
         </div>
         <script type="text/javascript" src="js/main.js"></script> 
 
-	</body>
+    </body>
 </html>

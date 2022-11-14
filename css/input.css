@@ -22,4 +22,8 @@ html, body {
 }
 .overlayContainer:hover .overlay {
 	height: 100%;
-}  
+} 
+ 
+.enabled {
+	opacity: 1;
+}

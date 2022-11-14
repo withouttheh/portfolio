@@ -12,8 +12,8 @@
     </head>
     <body class="h-full font-display">
         <div class="relative bg-pri h-full">   
-        	<div class="h-screen">
-            <header>
+        	<div class="h-screen" id="home">
+            <header id="header"> 
                 <div class="flex justify-between items-center p-8 bg-pri">
                     <div>
                         <img class="h-8" src="images/logo.png" />
@@ -64,7 +64,7 @@
                             >
                                 Please stick around and view some of my work below.
                             </p>
-                        </div> -->
+                        </div> --> 
                     </div>
                 </div>
             </main>
@@ -121,7 +121,7 @@
                         	<div class="overlayContainer relative">
                         		<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/Falcon9_rocket_family.png" />
                         		<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="#">
+                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="spaceX.html"> 
                                 		SPACE X: FALCON 9 LAUNCHES</a>
                                 	</div>
                         		</div>
@@ -130,7 +130,7 @@
                             	<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/toast.png" />
                             	<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
                         			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="churn.html">
-                                		TOAST</a>
+                                		CUSTOMER CHURN ANALYTICS</a>
                                 	</div>
                         		</div>
                             </div>
@@ -250,7 +250,10 @@
 	                </div>
 	            </div>
             </footer>
-        </div>
+        </div> 
+        <button class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri  lg:bottom-8 lg:right-8 " id="home-btn">
+        	&uarr;  
+        </button>   
         <script type="text/javascript" src="js/main.js"></script>
-    </body>
+    </body> 
 </html>

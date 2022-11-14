@@ -37,6 +37,11 @@ const contact = document.getElementById('contact')
 const contactBtn = document.getElementById('contact-btn')
 const contactLink = document.getElementById('contact-link')
 
+const home = document.getElementById('home')
+const homeBtn = document.getElementById('home-btn')
+const homeLink = document.getElementById('home-link')
+
+
 const contactScroll = () => {
 	contact.scrollIntoView({ 
 			behavior: 'smooth' 
@@ -45,6 +50,12 @@ const contactScroll = () => {
 
 const projectsScroll = () => {
 	projects.scrollIntoView({ 
+			behavior: 'smooth' 
+		})
+}
+
+const homeScroll = () => {
+	home.scrollIntoView({ 
 			behavior: 'smooth' 
 		})
 }
@@ -64,3 +75,29 @@ contactBtn.addEventListener('click', () => {
 contactLink.addEventListener('click', () => { 
 	contactScroll()
 })
+
+homeBtn.addEventListener('click', () => {
+	homeScroll()
+})
+
+// INTERSECTION OBSERVER
+
+const options = { threshold: 0 };
+const headerEl = document.getElementById("header");
+
+const intersectionCallback = (entries) => {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) {
+         homeBtn.classList.add(
+            "enabled"
+        );
+    } else {
+    	homeBtn.classList.remove(
+            "enabled"
+        )
+    }
+};
+
+let observer = new IntersectionObserver(intersectionCallback, options);
+observer.observe(headerEl);
