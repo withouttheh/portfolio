@@ -28,7 +28,7 @@
                         </button> -->
                     </div>
                     <nav class="justify-between items-center lg:flex">
-                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="home-link" href="index.html">< BACK TO HOME</a>
+                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="home-link" href="index.html">< BACK</a>
                       <!--  <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="projects-link">PROJECTS</a>
                         <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500"  id="contact-link"  href="index.html">CONTACT</a> -->
                     </nav>
@@ -43,68 +43,68 @@
                     </ul> 
                 </div> 
             </nav> -->
-            <section>
+            <main id="main">
                 <div
                     class="text-sm p-8 space-y-8 md:w-4/5 md:mx-auto lg:w-8/12"
                 >  
                     <div>    
-                        <h2 class="p-2 inline-block text-2xl border-b-2 border-gray-500">CUSTOMER CHURN</h2>
+                        <h2 class="p-2 inline-block text-2xl border-b-2 border-gray-500">SPACE-X ROCKET LAUNCH ANALYSIS</h2>
                     </div>
                     <div  class="space-y-4">
-                        <p>Businesses use customer churn analysis as one of their key business metrics because the cost of retaining an existing customer is far less than acquiring a new one.</p>
-                        <p>Churn = Percentage of existing customers who stop purchasing your products or services, often measured in a year.</p> 
-                        <p class="font-bold">How can data analytics help?</p>
-                        <p>Predicting when, why, and which customers will return or leave is a big challenge for many businesses. Predictive marketing can help flag customers who are at risk of leaving so that marketers can take proactive steps to retain these customers. Predictive analytics can also generate insights about loyalty-inducing behaviors that maximize customer lifetime value. Understanding the underlying customer patterns will greatly impact a business' ability to retain their customers. </p>
+                        <p>The main goal of this project is to predict whether the Falcon 9 first stage will land successfully. SpaceX prides itself in being able to reuse the first stage of a rocket launch so much so that they advertise on their website that their rocket launches cost 62 million while other providers cost upward 165 million. Much of these savings are down to the first stage's reusability. If we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch. </p> 
+                        <div>
+                            <img class="w-full m-auto md:w-1/3" src="images/crash.gif" />
+                        </div>
+                        <p>This brings us to our main question that we are trying to answer: <span class="font-bold">For a given set of features about a Falcon 9 rocket launch, will the first stage of the rocket land successfully?</span></p>
+                        <p>The methodolgy followed will include Data Dollection, Data Wrangling and Preprocessing, Exploratory Data Analysis, Data Visualization and finally, Machine Learning Prediction.</p> 
+                        <p>For the full project report you can check out the PDF in this <span class="border-b-2 border-gray-500 font-bold">repository</span></p>
                     </div>
                     <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CASE STUDY: HOW CAN I HELP TO REDUCE CHURN AND INCREASE REVENUE?</h3>
-                        <p>For a telecommunications company, I have done an extensive analysis to help reduce churn. The telectommunications company wanted to know what causes customers to churn and whether one can know which customers are likely to churn.</p>
-                        <p>Out of a total of 7043 customers, 26.6% of them have churned over the analysis period. That is about 1900 customers.</p>
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CASE STUDY: CAN I PREDICT WHETHER THE FALCON 9 FIRST STAGE WILL LAND SUCCESSFULLY?</h3>
+                        <p>Before we can predict the likelihood of a SpaceX rocket landing, an extensive analysis is carried out to understand patterns and draw insights from the underlying data. </p>
                         <div>
-                            <img class="w-full m-auto md:w-1/3" src="images/churn.png" />
-                        </div> 
-                    </div>
-                    <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500"> WHO IS CHURNING?</h3>
-                        <p>We identified some of the types customers who are likely to churn. We compare the churn rate with average monthly recurring revenue (MRR).</p>
-                        <p>A quick glance at the demographics and we can see that although seniors account for only 16% of the customers, they have a higher MRR and churn rate than those who are not seniors.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-1/3" src="images/senior pie churn.png" />
-                        </div> 
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/seniors churn.png" />
-                        </div> 
-                        <p>Gender does not seem to influence whether a customer will churn or not and both genders bring in similar average monthly revenue.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/gender churn.png" />
+                            <img class="w-full m-auto md:w-1/3" src="images/landing_1.gif" /> 
                         </div>
-                        <p>More than half of the customer base are on a month-to-month contract. This time of contract has a churn rate greater than 40%, meanwhile one-year contracts has less than 15% churn and two-year contracts has less than 5% churn.</p>
-                        <p>It is clear that the ease of ending a contract influences churn rate immensely and with month-to-month contracts being more than 50% of customers, this cannot be ignored.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-1/3" src="images/contract type.png" />
-                        </div>
+                        <p>Upon analysis I discovered that the launch sites have been strategically placed near the coast. The yellow markers are indicators of where the locations of all the SpaceX launch sites are situated in the US. </p>
                          <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/contract churn.png" />
+                            <img class="w-full m-auto md:w-2/3" src="images/launch_sites.PNG" /> 
+                        </div>
+                        <p>The generated map shows that the selected launch site is close to a highway for transportation of personnel and equipment. The launch site is also close to the coastlines for launch failure testing. The launch sites also maintain a certain distance from the cities. These are all safety measures.
+                        </p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/site_proximities.PNG" /> 
+                        </div>
+                        <p> A look into the success rate for the different launch sites shows that the success rate increased as the number of flights increased. The blue dots represent the successful launches while the red dot represent unsuccessful luanches. There seems to be an increase in successful flights after the 40th launch on each site.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/flight v launch site.png" />
+                        </div>
+                        <p>A payload is the object that needs to be carried into space e.g. satellite, spacecraft or people.</p>
+                        <p>The launch success rate for payloads 0-2500 kg is slightly lower than that of payloads 2500-5000 kg. There is in fact not much difference between the two. The booster version that has the largest success rate, in both weight ranges is the v1.1 booster.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-full" src="images/dash.PNG" /> 
+                        </div> 
+                        <p>Next we want to know if the distance from the Earth's surface has any effect on the success of the flights.</p>
+                        <p>Orbits SSO, HEO, GEO, and ES-L1 have 100% success rates. SO orbit did not have any successful launches with a 0% success rate.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/success rate orbit.png" />
+                        </div> 
+                        <p>Launch success improves every year as the SpaceX team collects data about each flight. The general trend of the chart shows an increase in landing success rate as the years pass. There is however a dip in 2018 as well as in 2020.</p>
+                        <div>
+                            <img class="w-full m-auto md:w-2/3" src="images/success rate years.png" />
                         </div>
                     </div>
                     <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">WHEN ARE THEY CHURNING?</h3>
-                        <p>The average customer tenure is 29 months. The churn rate is the highest (>40%) in the first five months with the first month reaching over 60% churn. The longer the customers stay, the lower their chances are of leaving.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-3/5" src="images/tenure dist.png" />
-                        </div> 
-                        <div> 
-                            <img class="w-full m-auto md:w-2/3" src="images/tenure churn rate.png" />
-                        </div>
-                        <p>Customers with monthly charges higher than $65 are the most susceptible to churn. The company is losing more <span class="font-bold">valuable</span> customers. Interestingly enough, there's a slight increase in customer retention wwhen the monthly charges are between $65-$85.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-3/5" src="images/monthly charges churn rate.png" />
-                        </div> 
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">MACHINE LEARNING</h3>
+                        <p> Four different machine learning algorithms were used to predict launch outcome. The Decision Tree classifier had the best accuracy at 94%.</p>
                     </div>
-                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span> </p>
+                    <div  class="space-y-4">  
+                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CONCLUSION</h3>
+                        <p> The analysis showed that there is a positive correlation between number of flights and success rate as the success rate has improved over the years. There are certain orbits like SSO, HEO, GEO, and ES-L1 where launches were the most successful. Success rate can be linked to payload mass as the lighter payloads generally proved to be more successful than the heavier payloads. The launch sites are strategically located near highways and railways for transportation of personel and cargo, but also far away from cities for safety. The best predictive model to use for this dataset is the Decision Tree Classifier as it had the highest accuracy with 94%</p>
+                    </div>
+                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span></p>
                     <p>Do you want to know more about how data analysis can help you? <span class="border-b-2 border-gray-500 font-bold">Please get in touch with me</span></p>
-                </div>
-            </section>
+                </div> 
+            </main>
             <footer>
                 <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
                     <div class="md:px-8">
@@ -117,6 +117,9 @@
                 </div>
             </footer>
         </div>
+         <button class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri  lg:bottom-8 lg:right-8 " id="home-btn">
+            &uarr;  
+        </button>
         <script type="text/javascript" src="js/main.js"></script> 
 
     </body>

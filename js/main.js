@@ -24,8 +24,17 @@ const toggleMenu = () => {
 		}
 }
 
-menuBtn.addEventListener("click", toggleMenu);
-menu.addEventListener("click", toggleMenu);
+const addListener = (btns) => { 
+	for(let i = 0; i < btns.length; i++) {
+		if (!btns[i]) {
+			return false
+		}
+		btns[i].addEventListener("click", toggleMenu);	
+	}
+} 
+
+const btns = [menuBtn, menu]
+addListener(btns)
 
 // SCROLL TO ELEMENT
 
@@ -60,21 +69,25 @@ const homeScroll = () => {
 		})
 }
 
-projectsBtn.addEventListener('click', () => {
-	setTimeout(projectsScroll, 500)
-})
+if (projectsBtn) {
+	projectsBtn.addEventListener('click', () => {
+		setTimeout(projectsScroll, 500)
+	})
+	projectsLink.addEventListener('click', () => {
+		projectsScroll()
+	})
+}
 
-projectsLink.addEventListener('click', () => {
-	projectsScroll()
-})
 
-contactBtn.addEventListener('click', () => { 
-	setTimeout(contactScroll, 500)
-})
+if (contactBtn){
+	contactBtn.addEventListener('click', () => { 
+		setTimeout(contactScroll, 500)
+	})
 
-contactLink.addEventListener('click', () => { 
-	contactScroll()
-})
+	contactLink.addEventListener('click', () => {
+		contactScroll()
+	})
+}
 
 homeBtn.addEventListener('click', () => {
 	homeScroll()
@@ -84,6 +97,7 @@ homeBtn.addEventListener('click', () => {
 
 const options = { threshold: 0 };
 const headerEl = document.getElementById("header");
+const mainEl = document.getElementById("main");
 
 const intersectionCallback = (entries) => {
     const [entry] = entries;
@@ -100,4 +114,4 @@ const intersectionCallback = (entries) => {
 };
 
 let observer = new IntersectionObserver(intersectionCallback, options);
-observer.observe(headerEl);
+observer.observe(mainEl);
