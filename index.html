@@ -28,9 +28,8 @@
                         </button>
                     </div>
                     <nav class="hidden justify-between items-center lg:flex">
-                        <!-- <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="home-link" href="index.html">HOME</a> -->
-                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="projects-link">PROJECTS</a>
-                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500"  id="contact-link">CONTACT</a>
+                        <a class="cursor-pointer mx-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-200 border-transparent border-b-2 hover:border-gray-500" id="projects-link">PROJECTS</a> 
+                        <a class="cursor-pointer mx-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-200 border-transparent border-b-2 hover:border-gray-500"  id="contact-link">CONTACT</a> 
                     </nav>
                 </div>
             </header>
@@ -58,13 +57,6 @@
                                 East London, South Africa.
                             </p>
                         </div>
-                        <!-- <div>
-                            <p
-                                class="py-8 text-center"
-                            >
-                                Please stick around and view some of my work below.
-                            </p>
-                        </div> --> 
                     </div>
                 </div>
             </main>
@@ -133,15 +125,7 @@
                                 		SPACE X: FALCON 9 LAUNCHES</a>
                                 	</div>
                         		</div>
-                        	</div>  
-                            <!-- <div class="overlayContainer relative">
-                            	<img class="block w-full cursor-pointer md:w-[25vw]" src="images/sbt.png" />
-                            	<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="#">
-                                		SBT ARCHITECTS</a>
-                                	</div>
-                        		</div>
-                            </div> -->
+                        	</div> 
                         </div>
                     </div>
                 </div>
@@ -160,83 +144,40 @@
             <div class="font-medium">
 				GET IN TOUCH WITH ME.
 			</div>
-  			<form>
+  			<form id="form" class="w-1/2">
     			<div class="form-group mb-6">
-			      <input type="text" class="form-control block
-			        w-full
-			        px-3
-			        py-1.5
-			        text-base
-			        font-normal
-			        text-gray-700
-			        bg-clip-padding
-			        border border-solid border-gray-300
-			        rounded
-			        transition
-			        ease-in-out
-			        m-0
-			        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+			      <input 
+			      	id="name"
+                    required 
+			      	type="text" 
+			      	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+			     	id="name"
 			        placeholder="Name">
+                    <div class="visibility-0 text-red-500 text-sm px-3" id="name-error"></div>
     			</div>
 			    <div class="form-group mb-6">
-			      <input type="email" class="form-control block
-			        w-full
-			        px-3
-			        py-1.5
-			        text-base
-			        font-normal
-			        text-gray-700
-			        bg-white bg-clip-padding
-			        border border-solid border-gray-300
-			        rounded
-			        transition
-			        ease-in-out
-			        m-0
-			        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+			      <input 
+			      	id="email"
+                    required 
+			      	type="email" 
+			      	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+			   		id="email"
 			        placeholder="Email address">
+                    <div class="visibility-0 text-red-500 text-sm px-3" id="email-error"></div>
 			    </div>
 			    <div class="form-group mb-6">
 			      <textarea
-			      class="
-			        form-control
-			        block
-			        w-full
-			        px-3
-			        py-1.5
-			        text-base
-			        font-normal
-			        text-gray-700
-			        bg-white bg-clip-padding
-			        border border-solid border-gray-300
-			        rounded
-			        transition
-			        ease-in-out
-			        m-0
-			        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-			      "
-			      id="exampleFormControlTextarea13"
-			      rows="3"
-			      placeholder="Message"
+			      	id="message"
+                    required
+			      	class=" form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+			     	id="message"
+			      	rows="3"
+			      	placeholder="Message"
 			    ></textarea>
+                <div class="visibility-0 text-red-500 text-sm px-3" id="message-error"></div>
 			    </div>
-			    <button type="submit" class="
-			      w-full
-			      px-6
-			      py-2.5
-			      bg-blue-600
-			      text-white
-			      font-medium
-			      text-xs
-			      leading-tight
-			      uppercase
-			      rounded
-			      shadow-md
-			      hover:bg-blue-700 hover:shadow-lg
-			      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-			      active:bg-blue-800 active:shadow-lg
-			      transition
-			      duration-150
-			      ease-in-out">Send</button>
+			    <button id="submit" type="submit" 
+			    	class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Send</button>
 			  </form>
 			</div>
             <footer>
@@ -253,7 +194,8 @@
         </div> 
         <button class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri  lg:bottom-8 lg:right-8 " id="home-btn">
         	&uarr;  
-        </button>   
+        </button>  
+        <script type="text/javascript" src="js/form.js"></script>  
         <script type="text/javascript" src="js/main.js"></script>
     </body> 
 </html>

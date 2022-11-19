@@ -27,3 +27,10 @@ html, body {
 .enabled {
 	opacity: 1;
 }
+.underline {
+	border-bottom: solid gray 2px;
+} 
+.error {
+	color: red;
+	visibility: 1;
+} 
