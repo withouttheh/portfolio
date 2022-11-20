@@ -81,10 +81,53 @@
                         <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CONCLUSION</h3>
                         <p> The analysis showed that there is a positive correlation between number of flights and success rate as the success rate has improved over the years. There are certain orbits like SSO, HEO, GEO, and ES-L1 where launches were the most successful. Success rate can be linked to payload mass as the lighter payloads generally proved to be more successful than the heavier payloads. The launch sites are strategically located near highways and railways for transportation of personel and cargo, but also far away from cities for safety. The best predictive model to use for this dataset is the Decision Tree Classifier as it had the highest accuracy with 94%</p>
                     </div>
-                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="border-b-2 border-gray-500 font-bold">CLICK HERE</span></p>
-                    <p>Do you want to know more about how data analysis can help you? <span class="border-b-2 border-gray-500 font-bold">Please get in touch with me</span></p>
+                    <p>To see the rest of the case study including code and the machine learning algorithms used to predict the likelihood of a customer churning <span class="cursor-pointer border-b-2 border-gray-500 font-bold">CLICK HERE</span></p>
+                    <p>Do you want to know more about how data analysis can help you? <span class="cursor-pointer border-b-2 border-gray-500 font-bold" id="form-link">Please get in touch with me</span></p>
                 </div> 
             </main>
+            <div class="hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-90" id="modal">
+                <div class="relative top-[25%] flex flex-col justify-center items-center p-6 rounded-lg shadow-lg bg-white max-w-md space-y-8 mx-auto my-auto" id="contact">
+                    <div class="flex justify-end w-full">
+                        <button type="button" class="cursor-pointer inline-block px-4 py-1.5 bg-red-400 text-white leading-tight uppercase rounded-full shadow-md text-xs hover:bg-red-500 hover:shadow-lg" id="close-modal">X</button>
+                    </div>
+                    <div class="font-medium uppercase">Get in touch with me.
+                    </div>  
+                    <form id="form" class="w-1/2">
+                        <div class="form-group mb-6">
+                          <input 
+                            id="name" 
+                            required 
+                            type="text" 
+                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                            id="name"
+                            placeholder="Name">
+                            <div class="visibility-0 text-red-500 text-sm px-3" id="name-error"></div>
+                        </div>
+                        <div class="form-group mb-6"> 
+                          <input 
+                            id="email"
+                            required 
+                            type="email" 
+                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                            id="email"
+                            placeholder="Email address">
+                            <div class="visibility-0 text-red-500 text-sm px-3" id="email-error"></div>
+                        </div>
+                        <div class="form-group mb-6">
+                          <textarea
+                            id="message"
+                            required
+                            class=" form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                            id="message"
+                            rows="3"
+                            placeholder="Message"></textarea>
+                        <div class="visibility-0 text-red-500 text-sm px-3" id="message-error"></div>
+                        </div>
+                        <button id="submit" type="submit" 
+                            class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Send</button>
+                    </form>
+                </div>
+            </div>
             <footer>
                 <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
                     <div class="md:px-8">
@@ -92,7 +135,7 @@
                     </div>
                     <span>|</span>
                     <div class="px-8"> 
-                        <span>&copy;<span class="year"></span> Luto Sibotoboto</span>
+                        <span>&copy; <span class="year"></span> Luto Sibotoboto</span>
                     </div>
                 </div>
             </footer>
@@ -100,6 +143,7 @@
          <button class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri  lg:bottom-8 lg:right-8 " id="home-btn">
             &uarr;  
         </button>
+        <script type="text/javascript" src="js/form.js"></script> 
         <script type="text/javascript" src="js/main.js"></script> 
 
     </body>

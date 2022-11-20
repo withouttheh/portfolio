@@ -118,6 +118,25 @@
 	let observer = new IntersectionObserver(intersectionCallback, options);
 	observer.observe(mainEl);
 
+// MODAL
+ 
+	const modal = document.getElementById('modal') 
+	const modalOpenBtn = document.getElementById('form-link')
+	const modalCloseBtn = document.getElementById('close-modal')
 
+	modalOpenBtn.addEventListener('click', () => {
+		modal.classList.add('open-modal')
+	})
+
+	modalCloseBtn.addEventListener('click', () => {
+		modal.classList.remove('open-modal')
+	})
+
+// DATE
+ 	const d = new Date();
+
+	let year = d.getFullYear();
+
+ 	document.querySelector('.year').textContent = year;
 
 })();
