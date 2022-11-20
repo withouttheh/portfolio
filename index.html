@@ -23,8 +23,8 @@
                             >MENU</span
                         >
                         <button class="h-5 w-5 space-y-2" id="burger">
-                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="top-bun"></span>
-                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-500" id="bottom-bun"></span> 
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-300" id="top-bun"></span>
+                            <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-300" id="bottom-bun"></span> 
                         </button>
                     </div>
                     <nav class="hidden justify-between items-center lg:flex">
@@ -33,7 +33,7 @@
                     </nav>
                 </div>
             </header>
-            <nav class="absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-500" id="menu"> 
+            <nav class="hidden absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-300" id="menu">
             	<div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
             		<ul class="text-center space-y-8">
             			<li id="projects-btn">PROJECTS</li>
@@ -75,7 +75,7 @@
                             <div class="overlayContainer relative">
                             	<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/sbt.png" />
                             	<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="http://sbt-architects.netlify.app">
+                        			<div><a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://sbt-architects.netlify.app">
                                 		SBT ARCHITECTS</a>
                                 	</div>
                         		</div>
@@ -83,7 +83,7 @@
                             <div class="overlayContainer relative">
                             	<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/toast.png" />
                             	<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="http://toastpub.netlify.app">
+                        			<div><a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://toastpub.netlify.app">
                                 		TOAST</a>
                                 	</div>
                         		</div>
@@ -91,7 +91,7 @@
                             <div class="overlayContainer relative">
                         		<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/Future First.png" />
                         		<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="http://future-first.netlify.app">
+                        			<div><a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://future-first.netlify.app">
                                 		FUTURE FIRST</a>
                                 	</div>
                         		</
@@ -113,15 +113,15 @@
                             <div class="overlayContainer relative">
                             	<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/customer churn.png" />
                             	<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div class="p-4"><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="churn.html">
-                                		CUSTOMER CHURN ANALYTICS</a>
+                        			<div class="p-4"><a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="churn.html">
+                                		CUSTOMER CHURN ANALYTICS</a> 
                                 	</div>
-                        		</div>
+                        		</div> 
                             </div>
                             <div class="overlayContainer relative">
                         		<img class="block w-full cursor-pointer  md:w-[25vw]" src="images/Falcon9_rocket_family.png" />
                         		<div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                        			<div class="p-4"><a class="border-b-2 border-gray-500 py-2 text-gray-500" href="spaceX.html"> 
+                        			<div class="p-4"><a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="spaceX.html"> 
                                 		SPACE X: FALCON 9 LAUNCHES</a>
                                 	</div>
                         		</div>
@@ -185,7 +185,7 @@
 	                </div>
 	                <span>|</span>
 	                <div class="px-8"> 
-                		<span>&copy; <span class="year"></span> Luto Sibotoboto</span>
+                		<span>&copy; <span id="year"></span> Luto Sibotoboto</span>
 	                </div>
 	            </div>
             </footer>

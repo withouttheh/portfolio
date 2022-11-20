@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html, body {
-	overflow-x: hidden;
+/*	overscroll-behavior-x: none;*/
 }
 .open #top-bun {
 	transform: rotate(45deg) translate(4px, 3px);
@@ -12,6 +12,7 @@ html, body {
 	transform: rotate(135deg) translate(-4px, 3px);
 } 
 .show {
+	display: block;
 	right: 0;
 	overflow-y: hidden;
 }

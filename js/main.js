@@ -124,19 +124,23 @@
 	const modalOpenBtn = document.getElementById('form-link')
 	const modalCloseBtn = document.getElementById('close-modal')
 
-	modalOpenBtn.addEventListener('click', () => {
-		modal.classList.add('open-modal')
-	})
+	if (!modal) {
+		return false
+	} else {
+		modalOpenBtn.addEventListener('click', () => {
+			modal.classList.add('open-modal')
+		})
 
-	modalCloseBtn.addEventListener('click', () => {
-		modal.classList.remove('open-modal')
-	})
+		modalCloseBtn.addEventListener('click', () => {
+			modal.classList.remove('open-modal')
+		})
+	}
 
 // DATE
  	const d = new Date();
 
 	let year = d.getFullYear();
 
- 	document.querySelector('.year').textContent = year;
+ 	document.getElementById('year').textContent = year;
 
 })();
