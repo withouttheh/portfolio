@@ -1,21 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "./src/js/**/*.js"],
+  content: ['./*.html', './src/js/**/*.js'],
   theme: {
     extend: {
       colors: {
-        'pri': "#f4f4fb",
+        space: '#050816',
+        card: '#0d1117',
+        accent: '#4f8ef7',
+        'accent-purple': '#7c3aed',
+        pri: '#f4f4fb',
       },
       fontFamily: {
-        display: ['Roboto', 'sans-serif']
+        display: ['Space Grotesk', 'sans-serif'],
       },
-      backgroundImage: {
-        'futureFirst': "url('images/Future First.png')",
-        'toast': "url('images/toast.png')",
-        'sbt': "url('images/sbt.png')"
-      }
     },
   },
   plugins: [],
 }
- 

@@ -1,226 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Luto Sibotoboto — Frontend Developer and Data Enthusiast based in Cape Town, South Africa. Building custom web solutions and data-driven insights for small businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Luto Sibotoboto | Web Developer" />
-        <meta property="og:description" content="Frontend Developer and Data Enthusiast based in Cape Town, South Africa." />
-        <meta property="og:type" content="website" />
-        <link rel="shortcut icon" href="images/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-        <title>Luto Sibotoboto | Web Developer</title>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1CBFNVJ55"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-W1CBFNVJ55');
-        </script>
-    </head>
-    <body class="h-full font-display">
-        <div class="relative bg-pri h-full">
-            <div class="h-screen" id="home">
-                <header id="header">
-                    <div class="flex justify-between items-center p-8 bg-pri">
-                        <div>
-                            <img class="h-8" src="images/logo.png" alt="Luto Sibotoboto logo" />
-                        </div>
-                        <div class="flex justify-between items-center lg:hidden">
-                            <span class="px-4 text-xl font-medium tracking-wider">MENU</span>
-                            <button
-                                class="h-5 w-5 space-y-2"
-                                id="burger"
-                                aria-label="Toggle navigation menu"
-                                aria-expanded="false"
-                            >
-                                <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-300" id="top-bun"></span>
-                                <span class="block h-0.5 w-5 bg-black transition-all ease-in-out duration-300" id="bottom-bun"></span>
-                            </button>
-                        </div>
-                        <nav aria-label="Primary navigation" class="hidden justify-between items-center lg:flex">
-                            <a class="cursor-pointer mx-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-200 border-transparent border-b-2 hover:border-gray-500" id="projects-link">PROJECTS</a>
-                            <a class="cursor-pointer mx-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-200 border-transparent border-b-2 hover:border-gray-500" id="contact-link">CONTACT</a>
-                        </nav>
-                    </div>
-                </header>
-                <nav class="hidden absolute top-[96px] right-[-100vw] bg-pri transition-all ease-in-out duration-300" id="menu" aria-label="Mobile navigation">
-                    <div class="flex justify-center items-center h-[calc(100vh_-_96px)] w-screen">
-                        <ul class="text-center space-y-8">
-                            <li id="projects-btn">PROJECTS</li>
-                            <li id="contact-btn">CONTACT</li>
-                        </ul>
-                    </div>
-                </nav>
-                <main class="h-full flex justify-center items-center" id="main">
-                    <div class="p-8">
-                        <div class="flex flex-col justify-center items-center space-y-12">
-                            <div class="space-y-8">
-                                <p class="text-5xl text-center font-medium">
-                                    Hello, I'm Luto.
-                                </p>
-                                <p class="mt-8 text-2xl text-center font-medium">
-                                    Frontend Developer and Data-Enthusiast based in
-                                    Cape Town, South Africa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <section class="mx-auto" id="projects" aria-label="Web development projects">
-                <div class="md:w-4/5 md:mx-auto lg:w-8/12">
-                    <div class="px-8 pb-8">
-                        <ul class="flex flex-row justify-center items-center space-x-8 font-medium">
-                            <li class="tracking-wide cursor-pointer" id="web-btn"><a>WEB DEV</a></li>
-                        </ul>
-                    </div>
-                    <div class="relative overflow-hidden">
-                        <div class="flex flex-col md:flex-row md:justify-center md:items-center" id="slider-web">
-                            <div class="overlayContainer relative">
-                                <img class="block w-full cursor-pointer md:w-[25vw]" src="images/sbt.png" loading="lazy" alt="SBT Architects project screenshot" />
-                                <div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                                    <div>
-                                        <a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://sbt-architects.netlify.app" target="_blank" rel="noopener noreferrer">
-                                            SBT ARCHITECTS
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="overlayContainer relative">
-                                <img class="block w-full cursor-pointer md:w-[25vw]" src="images/toast.png" loading="lazy" alt="Toast pub project screenshot" />
-                                <div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                                    <div>
-                                        <a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://toastpub.netlify.app" target="_blank" rel="noopener noreferrer">
-                                            TOAST
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="overlayContainer relative">
-                                <img class="block w-full cursor-pointer md:w-[25vw]" src="images/Future First.png" loading="lazy" alt="Future First project screenshot" />
-                                <div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                                    <div>
-                                        <a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="http://future-first.netlify.app" target="_blank" rel="noopener noreferrer">
-                                            FUTURE FIRST
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="mx-auto" aria-label="Data analytics projects">
-                <div class="md:w-4/5 md:mx-auto lg:w-8/12">
-                    <div class="p-8">
-                        <ul class="flex flex-row justify-center items-center space-x-8 font-medium">
-                            <li class="tracking-wide cursor-pointer" id="data-btn"><a>DATA ANALYTICS</a></li>
-                        </ul>
-                    </div>
-                    <div class="relative overflow-hidden">
-                        <div class="flex flex-col md:flex-row md:justify-center md:items-center" id="slider-data">
-                            <div class="overlayContainer relative">
-                                <img class="block w-full cursor-pointer md:w-[25vw]" src="images/customer churn.png" loading="lazy" alt="Customer churn analytics project screenshot" />
-                                <div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                                    <div class="p-4">
-                                        <a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="churn.html">
-                                            CUSTOMER CHURN ANALYTICS
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="overlayContainer relative">
-                                <img class="block w-full cursor-pointer md:w-[25vw]" src="images/Falcon9_rocket_family.png" loading="lazy" alt="SpaceX Falcon 9 analysis project screenshot" />
-                                <div class="overlay flex justify-center items-center absolute w-full h-0 bottom-0 left-0 right-0 bg-white overflow-hidden transition-[height] ease-in-out duration-500">
-                                    <div class="p-4">
-                                        <a class="inline-block text-center border-b-2 border-gray-500 py-2 text-gray-500" href="spaceX.html">
-                                            SPACE X: FALCON 9 LAUNCHES
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <aside class="mx-auto p-8 space-y-8 text-center lg:w-[75vw]">
-                <div class="md:w-4/5 md:mx-auto lg:w-8/12">
-                    Passionate about helping small businesses gain a competitive advantage in the market. Whether it is building custom web solutions to support your business goals or providing actionable insights to help you make data-driven decisions.
-                </div>
-                <div>
-                    <p>BUILD<span class="px-8">|</span>LAUNCH<span class="px-8">|</span>GROW</p>
-                </div>
-                <div>
-            </aside>
-            <div class="flex flex-col justify-center items-center p-6 rounded-lg shadow-lg bg-white max-w-md space-y-8 mx-auto" id="contact">
-                <div class="font-medium">GET IN TOUCH WITH ME.</div>
-                <form id="form" class="w-1/2" novalidate aria-label="Contact form">
-                    <div class="form-group mb-6">
-                        <input
-                            id="name"
-                            required
-                            type="text"
-                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Name"
-                            aria-label="Your name"
-                            autocomplete="name"
-                        />
-                        <div class="visibility-0 text-red-500 text-sm px-3" id="name-error" role="alert"></div>
-                    </div>
-                    <div class="form-group mb-6">
-                        <input
-                            id="email"
-                            required
-                            type="email"
-                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Email address"
-                            aria-label="Your email address"
-                            autocomplete="email"
-                        />
-                        <div class="visibility-0 text-red-500 text-sm px-3" id="email-error" role="alert"></div>
-                    </div>
-                    <div class="form-group mb-6">
-                        <textarea
-                            id="message"
-                            required
-                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            rows="3"
-                            placeholder="Message"
-                            aria-label="Your message"
-                        ></textarea>
-                        <div class="visibility-0 text-red-500 text-sm px-3" id="message-error" role="alert"></div>
-                    </div>
-                    <button
-                        id="submit"
-                        type="submit"
-                        class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                    >Send</button>
-                </form>
-            </div>
-            <footer>
-                <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
-                    <div class="md:px-8">
-                        <img class="inline h-6" src="images/icons/email.svg" alt="" aria-hidden="true" /><span> : lutosibotoboto@gmail.com</span>
-                    </div>
-                    <span aria-hidden="true">|</span>
-                    <div class="px-8">
-                        <span>&copy; <span id="year"></span> Luto Sibotoboto</span>
-                    </div>
-                </div>
-            </footer>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Luto Sibotoboto — Frontend Developer and Data Enthusiast based in Cape Town, South Africa. Building custom web solutions and data-driven insights for small businesses." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Luto Sibotoboto | Web Developer" />
+    <meta property="og:description" content="Frontend Developer and Data Enthusiast based in Cape Town, South Africa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://withouttheh.github.io/portfolio/" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Luto Sibotoboto | Web Developer</title>
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luto Sibotoboto",
+      "jobTitle": "Frontend Developer and Data Enthusiast",
+      "url": "https://withouttheh.github.io/portfolio/",
+      "email": "lutosibotoboto@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Cape Town", "addressCountry": "ZA" },
+      "sameAs": ["https://github.com/withouttheh"]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1CBFNVJ55"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W1CBFNVJ55');
+    </script>
+  </head>
+  <body class="bg-space font-display text-gray-200 overflow-x-hidden">
+
+    <!-- ── FIXED NAV ─────────────────────────────────────────────── -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="flex justify-between items-center px-8 py-5 max-w-6xl mx-auto">
+        <div>
+          <img class="h-7 invert opacity-80" src="images/logo.png" alt="Luto Sibotoboto" />
         </div>
-        <button
-            class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-gray-300 lg:bottom-8 lg:right-8"
-            id="home-btn"
-            aria-label="Back to top"
-        >
-            &uarr;
-        </button>
-        <script type="module" src="src/js/main.js"></script>
-    </body>
+        <!-- Mobile burger -->
+        <div class="flex items-center gap-4 lg:hidden">
+          <span class="text-xs tracking-[0.3em] text-gray-400 uppercase">Menu</span>
+          <button class="h-5 w-5 space-y-[6px]" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="block h-px w-5 bg-gray-300 transition-all ease-in-out duration-300" id="top-bun"></span>
+            <span class="block h-px w-5 bg-gray-300 transition-all ease-in-out duration-300" id="bottom-bun"></span>
+          </button>
+        </div>
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-10" aria-label="Primary navigation">
+          <a class="cursor-pointer text-xs tracking-[0.3em] text-gray-400 hover:text-accent uppercase transition-colors duration-200" id="projects-link">Projects</a>
+          <a class="cursor-pointer text-xs tracking-[0.3em] text-gray-400 hover:text-accent uppercase transition-colors duration-200" id="contact-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <nav class="hidden fixed top-[72px] right-[-100vw] bg-space transition-all ease-in-out duration-300 z-40" id="menu" aria-label="Mobile navigation">
+      <div class="flex justify-center items-center h-[calc(100vh_-_72px)] w-screen">
+        <ul class="text-center space-y-10">
+          <li id="projects-btn" class="text-2xl font-medium text-gray-300 cursor-pointer hover:text-accent transition-colors tracking-widest">Projects</li>
+          <li id="contact-btn" class="text-2xl font-medium text-gray-300 cursor-pointer hover:text-accent transition-colors tracking-widest">Contact</li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────────────────────── -->
+    <div class="relative h-screen overflow-hidden" id="home">
+      <canvas id="vortex" class="absolute inset-0 w-full h-full"></canvas>
+      <main class="relative z-10 h-full flex items-center justify-center" id="main">
+        <div class="text-center px-8 max-w-3xl mx-auto">
+          <p class="text-accent text-xs tracking-[0.45em] uppercase mb-5">Frontend Developer &amp; Data Enthusiast</p>
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-5">
+            Hello, I'm Luto.
+          </h1>
+          <p class="text-gray-500 text-sm tracking-wider mb-10">Cape Town, South Africa</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button id="projects-cta" class="px-8 py-3 bg-accent text-white text-xs tracking-[0.25em] font-medium uppercase rounded-lg hover:bg-accent/80 transition-all duration-200 cursor-pointer">
+              View Projects
+            </button>
+            <button id="contact-cta" class="px-8 py-3 border border-white/20 text-gray-300 text-xs tracking-[0.25em] font-medium uppercase rounded-lg hover:border-accent hover:text-accent transition-all duration-200 cursor-pointer">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+    <section class="py-28 px-8" id="projects" aria-label="Projects">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-16">
+          <span class="text-accent text-xs tracking-[0.35em]">01</span>
+          <span class="text-gray-700 mx-1">—</span>
+          <h2 class="text-xs tracking-[0.35em] text-gray-500 uppercase">Projects</h2>
+        </div>
+
+        <!-- Web Dev -->
+        <p class="text-gray-600 text-xs tracking-[0.35em] uppercase mb-6">Web Development</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+          <a class="group block rounded-xl overflow-hidden border border-white/5 hover:border-accent/30 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 hover:-translate-y-1"
+             href="http://sbt-architects.netlify.app" target="_blank" rel="noopener noreferrer">
+            <div class="overflow-hidden">
+              <img class="w-full aspect-video object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                   src="images/sbt.png" loading="lazy" alt="SBT Architects website" />
+            </div>
+            <div class="p-4">
+              <p class="text-gray-200 font-medium text-sm">SBT Architects</p>
+              <p class="text-accent text-xs mt-1 group-hover:translate-x-1 transition-transform duration-200">View project →</p>
+            </div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden border border-white/5 hover:border-accent/30 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 hover:-translate-y-1"
+             href="http://toastpub.netlify.app" target="_blank" rel="noopener noreferrer">
+            <div class="overflow-hidden">
+              <img class="w-full aspect-video object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                   src="images/toast.png" loading="lazy" alt="Toast pub website" />
+            </div>
+            <div class="p-4">
+              <p class="text-gray-200 font-medium text-sm">Toast</p>
+              <p class="text-accent text-xs mt-1 group-hover:translate-x-1 transition-transform duration-200">View project →</p>
+            </div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden border border-white/5 hover:border-accent/30 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 hover:-translate-y-1"
+             href="http://future-first.netlify.app" target="_blank" rel="noopener noreferrer">
+            <div class="overflow-hidden">
+              <img class="w-full aspect-video object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                   src="images/Future First.png" loading="lazy" alt="Future First website" />
+            </div>
+            <div class="p-4">
+              <p class="text-gray-200 font-medium text-sm">Future First</p>
+              <p class="text-accent text-xs mt-1 group-hover:translate-x-1 transition-transform duration-200">View project →</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Data Analytics -->
+        <p class="text-gray-600 text-xs tracking-[0.35em] uppercase mb-6">Data Analytics</p>
+        <div class="grid sm:grid-cols-2 gap-5 sm:max-w-[672px]">
+          <a class="group block rounded-xl overflow-hidden border border-white/5 hover:border-accent/30 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 hover:-translate-y-1"
+             href="churn.html">
+            <div class="overflow-hidden">
+              <img class="w-full aspect-video object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                   src="images/customer churn.png" loading="lazy" alt="Customer Churn Analytics project" />
+            </div>
+            <div class="p-4">
+              <p class="text-gray-200 font-medium text-sm">Customer Churn Analytics</p>
+              <p class="text-accent text-xs mt-1 group-hover:translate-x-1 transition-transform duration-200">View case study →</p>
+            </div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden border border-white/5 hover:border-accent/30 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 hover:-translate-y-1"
+             href="spaceX.html">
+            <div class="overflow-hidden">
+              <img class="w-full aspect-video object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                   src="images/Falcon9_rocket_family.png" loading="lazy" alt="SpaceX Falcon 9 Launch Analysis project" />
+            </div>
+            <div class="p-4">
+              <p class="text-gray-200 font-medium text-sm">SpaceX: Falcon 9 Launches</p>
+              <p class="text-accent text-xs mt-1 group-hover:translate-x-1 transition-transform duration-200">View case study →</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────────────── -->
+    <section class="py-16 px-8 border-t border-white/5" aria-label="About">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-12">
+          <span class="text-accent text-xs tracking-[0.35em]">02</span>
+          <span class="text-gray-700 mx-1">—</span>
+          <h2 class="text-xs tracking-[0.35em] text-gray-500 uppercase">About</h2>
+        </div>
+        <div class="max-w-xl">
+          <p class="text-gray-400 leading-relaxed text-sm">
+            Passionate about helping small businesses gain a competitive advantage in the market.
+            Whether it is building custom web solutions to support your business goals or providing
+            actionable insights to help you make data-driven decisions.
+          </p>
+          <p class="text-accent text-sm font-medium tracking-[0.3em] mt-8 uppercase">
+            Build <span class="text-gray-700 mx-3">|</span> Launch <span class="text-gray-700 mx-3">|</span> Grow
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <section class="py-28 px-8 border-t border-white/5" id="contact" aria-label="Contact">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-12">
+          <span class="text-accent text-xs tracking-[0.35em]">03</span>
+          <span class="text-gray-700 mx-1">—</span>
+          <h2 class="text-xs tracking-[0.35em] text-gray-500 uppercase">Contact</h2>
+        </div>
+        <p class="text-gray-500 text-xs tracking-[0.35em] uppercase mb-10">Get in touch with me.</p>
+        <form id="form" class="max-w-md space-y-4" novalidate aria-label="Contact form">
+          <div>
+            <input id="name" required type="text" placeholder="Name"
+              autocomplete="name" aria-label="Your name"
+              class="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg text-gray-200 placeholder-gray-600 text-sm focus:outline-none focus:border-accent/50 transition-colors" />
+            <div class="text-red-400 text-xs mt-1 min-h-[18px]" id="name-error" role="alert"></div>
+          </div>
+          <div>
+            <input id="email" required type="email" placeholder="Email address"
+              autocomplete="email" aria-label="Your email address"
+              class="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg text-gray-200 placeholder-gray-600 text-sm focus:outline-none focus:border-accent/50 transition-colors" />
+            <div class="text-red-400 text-xs mt-1 min-h-[18px]" id="email-error" role="alert"></div>
+          </div>
+          <div>
+            <textarea id="message" required rows="4" placeholder="Message"
+              aria-label="Your message"
+              class="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg text-gray-200 placeholder-gray-600 text-sm focus:outline-none focus:border-accent/50 transition-colors resize-none"></textarea>
+            <div class="text-red-400 text-xs mt-1 min-h-[18px]" id="message-error" role="alert"></div>
+          </div>
+          <button id="submit" type="submit"
+            class="w-full py-3 bg-accent text-white text-xs tracking-[0.25em] font-medium uppercase rounded-lg hover:bg-accent/80 transition-all duration-200">
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+    <footer class="border-t border-white/5 py-8 px-8">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2 text-gray-500 text-sm">
+          <img class="h-4 invert opacity-30" src="images/icons/email.svg" alt="" aria-hidden="true" />
+          <span>lutosibotoboto@gmail.com</span>
+        </div>
+        <span class="text-gray-600 text-sm">&copy; <span id="year"></span> Luto Sibotoboto</span>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button
+      class="flex justify-center items-center fixed bottom-6 right-6 w-9 h-9 rounded-lg cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-accent/10 border border-accent/20 text-accent text-sm hover:bg-accent/20 lg:bottom-8 lg:right-8"
+      id="home-btn" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
 </html>

@@ -2,19 +2,23 @@ const scrollTo = (id) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
 export function initScrollNav() {
+  // Desktop nav links
+  document.getElementById('projects-link')?.addEventListener('click', () => scrollTo('projects'))
+  document.getElementById('contact-link')?.addEventListener('click', () => scrollTo('contact'))
+
+  // Mobile menu buttons (delay to let menu close first)
   const projectsBtn = document.getElementById('projects-btn')
-  const projectsLink = document.getElementById('projects-link')
   if (projectsBtn) {
     projectsBtn.addEventListener('click', () => setTimeout(() => scrollTo('projects'), 500))
-    projectsLink.addEventListener('click', () => scrollTo('projects'))
   }
-
   const contactBtn = document.getElementById('contact-btn')
-  const contactLink = document.getElementById('contact-link')
   if (contactBtn) {
     contactBtn.addEventListener('click', () => setTimeout(() => scrollTo('contact'), 500))
-    contactLink.addEventListener('click', () => scrollTo('contact'))
   }
+
+  // Hero CTA buttons
+  document.getElementById('projects-cta')?.addEventListener('click', () => scrollTo('projects'))
+  document.getElementById('contact-cta')?.addEventListener('click', () => scrollTo('contact'))
 }
 
 export function initBackToTop() {
@@ -28,4 +32,15 @@ export function initBackToTop() {
     ([entry]) => homeBtn.classList.toggle('enabled', !entry.isIntersecting),
     { threshold: 0 }
   ).observe(mainEl)
+}
+
+export function initFrostedNav() {
+  const header = document.getElementById('header')
+  if (!header) return
+
+  window.addEventListener(
+    'scroll',
+    () => header.classList.toggle('scrolled', window.scrollY > 60),
+    { passive: true }
+  )
 }
