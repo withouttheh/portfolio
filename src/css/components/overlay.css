@@ -1,0 +1,18 @@
+/* Project card hover reveal */
+.overlayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlayContainer:hover .overlay {
+  height: 100%;
+}
+
+/* Back-to-top button visibility */
+.enabled {
+  opacity: 1;
+}
+
+.underline {
+  border-bottom: solid gray 2px;
+}

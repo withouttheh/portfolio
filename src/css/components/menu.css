@@ -1,0 +1,14 @@
+/* Burger icon animation */
+.open #top-bun {
+  transform: rotate(45deg) translate(4px, 3px);
+}
+.open #bottom-bun {
+  transform: rotate(135deg) translate(-4px, 3px);
+}
+
+/* Mobile nav slide-in panel */
+.show {
+  display: block;
+  right: 0;
+  overflow-y: hidden;
+}

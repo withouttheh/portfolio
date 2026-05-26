@@ -1,0 +1,5 @@
+/* Validation error state */
+.error {
+  color: red;
+  display: block;
+}
