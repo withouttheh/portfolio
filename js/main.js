@@ -1,146 +1,75 @@
-(function() {
+import { initForm } from './form.js'
 
-// SLIDE MENU 
+function initMenu() {
+  const menuBtn = document.getElementById('burger')
+  const menu = document.getElementById('menu')
+  if (!menuBtn || !menu) return
 
-	// select dom items
-	const menuBtn = document.getElementById("burger");
+  let showMenu = false
 
-	const menu = document.getElementById("menu");
+  const toggleMenu = () => {
+    showMenu = !showMenu
+    menuBtn.classList.toggle('open', showMenu)
+    menu.classList.toggle('show', showMenu)
+  }
 
-	// Set the initial state of the menu
-	let showMenu = false;
+  ;[menuBtn, menu].forEach((el) => el.addEventListener('click', toggleMenu))
+}
 
-	const toggleMenu = () => {
-		if (!showMenu) {
-			menuBtn.classList.add("open");
-			menu.classList.add("show");
+function initScrollNav() {
+  const scrollTo = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
-			// Reset the menu state
-			showMenu = true;
-		} else {
-			menuBtn.classList.remove("open");
-			menu.classList.remove("show");
+  const projectsBtn = document.getElementById('projects-btn')
+  const projectsLink = document.getElementById('projects-link')
+  if (projectsBtn) {
+    projectsBtn.addEventListener('click', () => setTimeout(() => scrollTo('projects'), 500))
+    projectsLink.addEventListener('click', () => scrollTo('projects'))
+  }
 
-			// Reset the menu state
-			showMenu = false;
-			}
-	}
+  const contactBtn = document.getElementById('contact-btn')
+  const contactLink = document.getElementById('contact-link')
+  if (contactBtn) {
+    contactBtn.addEventListener('click', () => setTimeout(() => scrollTo('contact'), 500))
+    contactLink.addEventListener('click', () => scrollTo('contact'))
+  }
+}
 
-	const addListener = (btns) => { 
-		for(let i = 0; i < btns.length; i++) {
-			if (!btns[i]) {
-				return false
-			}
-			btns[i].addEventListener("click", toggleMenu);	
-		}
-	} 
+function initBackToTop() {
+  const homeBtn = document.getElementById('home-btn')
+  const mainEl = document.getElementById('main')
+  if (!homeBtn || !mainEl) return
 
-	const btns = [menuBtn, menu]
-	addListener(btns)
+  homeBtn.addEventListener('click', () =>
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })
+  )
 
-// SCROLL TO ELEMENT
+  new IntersectionObserver(
+    ([entry]) => homeBtn.classList.toggle('enabled', !entry.isIntersecting),
+    { threshold: 0 }
+  ).observe(mainEl)
+}
 
-	const projects = document.getElementById('projects')
-	const projectsBtn = document.getElementById('projects-btn')
-	const projectsLink = document.getElementById('projects-link')
+function initModal() {
+  const modal = document.getElementById('modal')
+  if (!modal) return
 
-	const contact = document.getElementById('contact')
-	const contactBtn = document.getElementById('contact-btn')
-	const contactLink = document.getElementById('contact-link')
+  document.getElementById('form-link')?.addEventListener('click', () =>
+    modal.classList.add('open-modal')
+  )
+  document.getElementById('close-modal')?.addEventListener('click', () =>
+    modal.classList.remove('open-modal')
+  )
+}
 
-	const home = document.getElementById('home')
-	const homeBtn = document.getElementById('home-btn')
-	const homeLink = document.getElementById('home-link')
+function initYear() {
+  const yearEl = document.getElementById('year')
+  if (yearEl) yearEl.textContent = new Date().getFullYear()
+}
 
-
-	const contactScroll = () => {
-		contact.scrollIntoView({ 
-				behavior: 'smooth' 
-			})
-	}
-
-	const projectsScroll = () => {
-		projects.scrollIntoView({ 
-				behavior: 'smooth' 
-			})
-	}
-
-	const homeScroll = () => {
-		home.scrollIntoView({ 
-				behavior: 'smooth' 
-			})
-	}
-
-	if (projectsBtn) {
-		projectsBtn.addEventListener('click', () => {
-			setTimeout(projectsScroll, 500)
-		})
-		projectsLink.addEventListener('click', () => {
-			projectsScroll()
-		})
-	}
-
-
-	if (contactBtn){
-		contactBtn.addEventListener('click', () => { 
-			setTimeout(contactScroll, 500)
-		})
-
-		contactLink.addEventListener('click', () => {
-			contactScroll()
-		})
-	} 
-
-	homeBtn.addEventListener('click', () => {
-		homeScroll()
-	})
-
-// INTERSECTION OBSERVER
-
-	const options = { threshold: 0 };
-	const headerEl = document.getElementById("header");
-	const mainEl = document.getElementById("main");
-
-	const intersectionCallback = (entries) => {
-	    const [entry] = entries;
-
-	    if (!entry.isIntersecting) {
-	         homeBtn.classList.add(
-	            "enabled"
-	        );
-	    } else {
-	    	homeBtn.classList.remove(
-	            "enabled"
-	        )
-	    }
-	};
-
-	let observer = new IntersectionObserver(intersectionCallback, options);
-	observer.observe(mainEl);
-
-// MODAL
- 
-	const modal = document.getElementById('modal') 
-	const modalOpenBtn = document.getElementById('form-link')
-	const modalCloseBtn = document.getElementById('close-modal')
-
-	if (!modal) {
-		return false
-	} else {
-		modalOpenBtn.addEventListener('click', () => {
-			modal.classList.add('open-modal')
-		})
-
-		modalCloseBtn.addEventListener('click', () => {
-			modal.classList.remove('open-modal')
-		})
-	}
-
-// DATE
- 	const d = new Date();
-
-	let year = d.getFullYear();
-
- 	document.getElementById('year').textContent = year;
-
-})();
+initMenu()
+initScrollNav()
+initBackToTop()
+initModal()
+initForm()
+initYear()

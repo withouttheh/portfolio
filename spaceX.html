@@ -1,159 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="SpaceX Falcon 9 launch analysis — predicting first stage landing success using machine learning, with a 94% accuracy Decision Tree classifier." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="SpaceX Falcon 9 Launch Analysis | Luto Sibotoboto" />
+        <meta property="og:description" content="Data science project predicting SpaceX Falcon 9 first stage landing success using machine learning." />
+        <meta property="og:type" content="article" />
         <link rel="shortcut icon" href="images/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <title>Luto Sibotoboto | Web Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/input.css" />
+        <title>SpaceX Falcon 9 Launch Analysis | Luto Sibotoboto</title>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1CBFNVJ55"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-W1CBFNVJ55');
         </script>
     </head>
     <body class="h-full font-display">
-        <div class="relative h-full">   
+        <div class="relative h-full">
             <div class="">
-            <header>
-                <div class="flex justify-between items-center p-8">
-                    <div> 
-                        <img class="h-8" src="images/logo.png" />
+                <header>
+                    <div class="flex justify-between items-center p-8">
+                        <div>
+                            <img class="h-8" src="images/logo.png" alt="Luto Sibotoboto logo" />
+                        </div>
+                        <nav class="justify-between items-center lg:flex" aria-label="Primary navigation">
+                            <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" href="index.html">&lt; BACK</a>
+                        </nav>
                     </div>
-                    <nav class="justify-between items-center lg:flex">
-                        <a class="cursor-pointer px-4 text-lg font-medium tracking-wide transition-all ease-in-out duration-500" id="home-link" href="index.html">< BACK</a>
-                    </nav>
-                </div> 
-            </header> 
-            <main id="main">
-                <div
-                    class="text-sm p-8 space-y-8 md:w-4/5 md:mx-auto lg:w-8/12"
-                >  
-                    <div>    
-                        <h2 class="p-2 inline-block text-2xl border-b-2 border-gray-500">SPACE-X ROCKET LAUNCH ANALYSIS</h2>
+                </header>
+                <main id="main">
+                    <div class="text-sm p-8 space-y-8 md:w-4/5 md:mx-auto lg:w-8/12">
+                        <div>
+                            <h1 class="p-2 inline-block text-2xl border-b-2 border-gray-500">SPACE-X ROCKET LAUNCH ANALYSIS</h1>
+                        </div>
+                        <div class="space-y-4">
+                            <p>The main goal of this project is to predict whether the Falcon 9 first stage will land successfully. SpaceX prides itself in being able to reuse the first stage of a rocket launch so much so that they advertise on their website that their rocket launches cost 62 million while other providers cost upward 165 million. Much of these savings are down to the first stage's reusability. If we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-1/3" src="images/crash.gif" loading="lazy" alt="Animation of a rocket crash landing" />
+                            </div>
+                            <p>This brings us to our main question that we are trying to answer: <span class="font-bold">For a given set of features about a Falcon 9 rocket launch, will the first stage of the rocket land successfully?</span></p>
+                            <p>The methodology followed will include Data Collection, Data Wrangling and Preprocessing, Exploratory Data Analysis, Data Visualization and finally, Machine Learning Prediction.</p>
+                            <p>For the full project report you can check out the PDF in this <span class="border-b-2 border-gray-500 font-bold">repository</span></p>
+                        </div>
+                        <div class="space-y-4">
+                            <h2 class="inline-block text-xl p-2 border-b-2 border-gray-500">CASE STUDY: CAN I PREDICT WHETHER THE FALCON 9 FIRST STAGE WILL LAND SUCCESSFULLY?</h2>
+                            <p>Before we can predict the likelihood of a SpaceX rocket landing, an extensive analysis is carried out to understand patterns and draw insights from the underlying data.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-1/3" src="images/landing_1.gif" loading="lazy" alt="Animation of a successful Falcon 9 landing" />
+                            </div>
+                            <p>Upon analysis I discovered that the launch sites have been strategically placed near the coast. The yellow markers are indicators of where the locations of all the SpaceX launch sites are situated in the US.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-2/3" src="images/launch_sites.PNG" loading="lazy" alt="Map showing SpaceX launch site locations in the US" />
+                            </div>
+                            <p>The generated map shows that the selected launch site is close to a highway for transportation of personnel and equipment. The launch site is also close to the coastlines for launch failure testing. The launch sites also maintain a certain distance from the cities. These are all safety measures.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-2/3" src="images/site_proximities.PNG" loading="lazy" alt="Map showing launch site proximities to highways and coastlines" />
+                            </div>
+                            <p>A look into the success rate for the different launch sites shows that the success rate increased as the number of flights increased. The blue dots represent the successful launches while the red dot represent unsuccessful launches. There seems to be an increase in successful flights after the 40th launch on each site.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-2/3" src="images/flight v launch site.png" loading="lazy" alt="Chart showing flight number vs launch site success rate" />
+                            </div>
+                            <p>A payload is the object that needs to be carried into space e.g. satellite, spacecraft or people.</p>
+                            <p>The launch success rate for payloads 0–2500 kg is slightly lower than that of payloads 2500–5000 kg. There is in fact not much difference between the two. The booster version that has the largest success rate, in both weight ranges is the v1.1 booster.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-full" src="images/dash.PNG" loading="lazy" alt="Dashboard showing payload mass vs launch success by booster version" />
+                            </div>
+                            <p>Next we want to know if the distance from the Earth's surface has any effect on the success of the flights.</p>
+                            <p>Orbits SSO, HEO, GEO, and ES-L1 have 100% success rates. SO orbit did not have any successful launches with a 0% success rate.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-2/3" src="images/success rate orbit.png" loading="lazy" alt="Chart showing success rate by orbit type" />
+                            </div>
+                            <p>Launch success improves every year as the SpaceX team collects data about each flight. The general trend of the chart shows an increase in landing success rate as the years pass. There is however a dip in 2018 as well as in 2020.</p>
+                            <div>
+                                <img class="w-full m-auto md:w-2/3" src="images/success rate years.png" loading="lazy" alt="Chart showing launch success rate over the years" />
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h2 class="inline-block text-xl p-2 border-b-2 border-gray-500">MACHINE LEARNING</h2>
+                            <p>Four different machine learning algorithms were used to predict launch outcome. The Decision Tree classifier had the best accuracy at 94%.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h2 class="inline-block text-xl p-2 border-b-2 border-gray-500">CONCLUSION</h2>
+                            <p>The analysis showed that there is a positive correlation between number of flights and success rate as the success rate has improved over the years. There are certain orbits like SSO, HEO, GEO, and ES-L1 where launches were the most successful. Success rate can be linked to payload mass as the lighter payloads generally proved to be more successful than the heavier payloads. The launch sites are strategically located near highways and railways for transportation of personnel and cargo, but also far away from cities for safety. The best predictive model to use for this dataset is the Decision Tree Classifier as it had the highest accuracy with 94%.</p>
+                        </div>
+                        <p>Do you want to know more about how data analysis can help you? <span class="cursor-pointer border-b-2 border-gray-500 font-bold" id="form-link">Please get in touch with me</span></p>
                     </div>
-                    <div  class="space-y-4">
-                        <p>The main goal of this project is to predict whether the Falcon 9 first stage will land successfully. SpaceX prides itself in being able to reuse the first stage of a rocket launch so much so that they advertise on their website that their rocket launches cost 62 million while other providers cost upward 165 million. Much of these savings are down to the first stage's reusability. If we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch. </p> 
-                        <div>
-                            <img class="w-full m-auto md:w-1/3" src="images/crash.gif" />
+                </main>
+                <div class="hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-90" id="modal" role="dialog" aria-modal="true" aria-label="Contact form">
+                    <div class="relative top-[25%] flex flex-col justify-center items-center p-6 rounded-lg shadow-lg bg-white max-w-md space-y-8 mx-auto my-auto" id="contact">
+                        <div class="flex justify-end w-full">
+                            <button type="button" class="cursor-pointer inline-block px-4 py-1.5 bg-red-400 text-white leading-tight uppercase rounded-full shadow-md text-xs hover:bg-red-500 hover:shadow-lg" id="close-modal" aria-label="Close contact form">X</button>
                         </div>
-                        <p>This brings us to our main question that we are trying to answer: <span class="font-bold">For a given set of features about a Falcon 9 rocket launch, will the first stage of the rocket land successfully?</span></p>
-                        <p>The methodolgy followed will include Data Dollection, Data Wrangling and Preprocessing, Exploratory Data Analysis, Data Visualization and finally, Machine Learning Prediction.</p> 
-                        <p>For the full project report you can check out the PDF in this <span class="border-b-2 border-gray-500 font-bold">repository</span></p>
+                        <div class="font-medium uppercase">Get in touch with me.</div>
+                        <form id="form" class="w-1/2" novalidate aria-label="Contact form">
+                            <div class="form-group mb-6">
+                                <input
+                                    id="name"
+                                    required
+                                    type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Name"
+                                    aria-label="Your name"
+                                    autocomplete="name"
+                                />
+                                <div class="visibility-0 text-red-500 text-sm px-3" id="name-error" role="alert"></div>
+                            </div>
+                            <div class="form-group mb-6">
+                                <input
+                                    id="email"
+                                    required
+                                    type="email"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Email address"
+                                    aria-label="Your email address"
+                                    autocomplete="email"
+                                />
+                                <div class="visibility-0 text-red-500 text-sm px-3" id="email-error" role="alert"></div>
+                            </div>
+                            <div class="form-group mb-6">
+                                <textarea
+                                    id="message"
+                                    required
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    rows="3"
+                                    placeholder="Message"
+                                    aria-label="Your message"
+                                ></textarea>
+                                <div class="visibility-0 text-red-500 text-sm px-3" id="message-error" role="alert"></div>
+                            </div>
+                            <button
+                                id="submit"
+                                type="submit"
+                                class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            >Send</button>
+                        </form>
                     </div>
-                    <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CASE STUDY: CAN I PREDICT WHETHER THE FALCON 9 FIRST STAGE WILL LAND SUCCESSFULLY?</h3>
-                        <p>Before we can predict the likelihood of a SpaceX rocket landing, an extensive analysis is carried out to understand patterns and draw insights from the underlying data. </p>
-                        <div>
-                            <img class="w-full m-auto md:w-1/3" src="images/landing_1.gif" /> 
-                        </div>
-                        <p>Upon analysis I discovered that the launch sites have been strategically placed near the coast. The yellow markers are indicators of where the locations of all the SpaceX launch sites are situated in the US. </p>
-                         <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/launch_sites.PNG" /> 
-                        </div>
-                        <p>The generated map shows that the selected launch site is close to a highway for transportation of personnel and equipment. The launch site is also close to the coastlines for launch failure testing. The launch sites also maintain a certain distance from the cities. These are all safety measures.
-                        </p>
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/site_proximities.PNG" /> 
-                        </div>
-                        <p> A look into the success rate for the different launch sites shows that the success rate increased as the number of flights increased. The blue dots represent the successful launches while the red dot represent unsuccessful luanches. There seems to be an increase in successful flights after the 40th launch on each site.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/flight v launch site.png" />
-                        </div>
-                        <p>A payload is the object that needs to be carried into space e.g. satellite, spacecraft or people.</p>
-                        <p>The launch success rate for payloads 0-2500 kg is slightly lower than that of payloads 2500-5000 kg. There is in fact not much difference between the two. The booster version that has the largest success rate, in both weight ranges is the v1.1 booster.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-full" src="images/dash.PNG" /> 
-                        </div> 
-                        <p>Next we want to know if the distance from the Earth's surface has any effect on the success of the flights.</p>
-                        <p>Orbits SSO, HEO, GEO, and ES-L1 have 100% success rates. SO orbit did not have any successful launches with a 0% success rate.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/success rate orbit.png" />
-                        </div> 
-                        <p>Launch success improves every year as the SpaceX team collects data about each flight. The general trend of the chart shows an increase in landing success rate as the years pass. There is however a dip in 2018 as well as in 2020.</p>
-                        <div>
-                            <img class="w-full m-auto md:w-2/3" src="images/success rate years.png" />
-                        </div>
-                    </div>
-                    <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">MACHINE LEARNING</h3>
-                        <p> Four different machine learning algorithms were used to predict launch outcome. The Decision Tree classifier had the best accuracy at 94%.</p>
-                    </div>
-                    <div  class="space-y-4">  
-                        <h3 class="inline-block text-xl p-2 border-b-2 border-gray-500">CONCLUSION</h3>
-                        <p> The analysis showed that there is a positive correlation between number of flights and success rate as the success rate has improved over the years. There are certain orbits like SSO, HEO, GEO, and ES-L1 where launches were the most successful. Success rate can be linked to payload mass as the lighter payloads generally proved to be more successful than the heavier payloads. The launch sites are strategically located near highways and railways for transportation of personel and cargo, but also far away from cities for safety. The best predictive model to use for this dataset is the Decision Tree Classifier as it had the highest accuracy with 94%</p>
-                    </div> 
-                    <!-- <p>To see the rest of the case study including code and the machine learning algorithms used to predict whether the Falcon 9 first stage will land successfully <span class="cursor-pointer border-b-2 border-gray-500 font-bold">CLICK HERE</span></p> -->
-                    <p>Do you want to know more about how data analysis can help you? <span class="cursor-pointer border-b-2 border-gray-500 font-bold" id="form-link">Please get in touch with me</span></p>
-                </div>  
-            </main>
-            <div class="hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-90" id="modal">
-                <div class="relative top-[25%] flex flex-col justify-center items-center p-6 rounded-lg shadow-lg bg-white max-w-md space-y-8 mx-auto my-auto" id="contact">
-                    <div class="flex justify-end w-full">
-                        <button type="button" class="cursor-pointer inline-block px-4 py-1.5 bg-red-400 text-white leading-tight uppercase rounded-full shadow-md text-xs hover:bg-red-500 hover:shadow-lg" id="close-modal">X</button>
-                    </div>
-                    <div class="font-medium uppercase">Get in touch with me.
-                    </div>  
-                    <form id="form" class="w-1/2">
-                        <div class="form-group mb-6">
-                          <input 
-                            id="name" 
-                            required 
-                            type="text" 
-                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
-                            id="name"
-                            placeholder="Name">
-                            <div class="visibility-0 text-red-500 text-sm px-3" id="name-error"></div>
-                        </div>
-                        <div class="form-group mb-6"> 
-                          <input 
-                            id="email"
-                            required 
-                            type="email" 
-                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
-                            id="email"
-                            placeholder="Email address">
-                            <div class="visibility-0 text-red-500 text-sm px-3" id="email-error"></div>
-                        </div>
-                        <div class="form-group mb-6">
-                          <textarea
-                            id="message"
-                            required
-                            class=" form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            id="message"
-                            rows="3"
-                            placeholder="Message"></textarea>
-                        <div class="visibility-0 text-red-500 text-sm px-3" id="message-error"></div>
-                        </div>
-                        <button id="submit" type="submit" 
-                            class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Send</button>
-                    </form>
                 </div>
+                <footer>
+                    <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
+                        <div class="md:px-8">
+                            <img class="inline h-6" src="images/icons/email.svg" alt="" aria-hidden="true" /><span> : lutosibotoboto@gmail.com</span>
+                        </div>
+                        <span aria-hidden="true">|</span>
+                        <div class="px-8">
+                            <span>&copy; <span id="year"></span> Luto Sibotoboto</span>
+                        </div>
+                    </div>
+                </footer>
             </div>
-            <footer>
-                <div class="flex flex-col justify-center items-center p-8 lg:flex-row">
-                    <div class="md:px-8">
-                        <img class="inline h-6" src="images/icons/email.svg"><span> : lutosibotoboto@gmail.com</span>
-                    </div>
-                    <span>|</span>
-                    <div class="px-8"> 
-                        <span>&copy; <span id="year"></span> Luto Sibotoboto</span>
-                    </div>
-                </div>
-            </footer>
+            <button
+                class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri lg:bottom-8 lg:right-8"
+                id="home-btn"
+                aria-label="Back to top"
+            >
+                &uarr;
+            </button>
+            <script type="module" src="js/main.js"></script>
         </div>
-         <button class="flex justify-center items-center fixed bottom-4 w-8 h-8 right-4 rounded cursor-pointer opacity-0 transition-all ease-in-out duration-500 bg-pri  lg:bottom-8 lg:right-8 " id="home-btn">
-            &uarr;  
-        </button>
-        <script type="text/javascript" src="js/form.js"></script> 
-        <script type="text/javascript" src="js/main.js"></script> 
-
     </body>
 </html>

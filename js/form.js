@@ -1,85 +1,63 @@
-(function() {
-	// FORM VALIDATION 
+export function initForm() {
+  const form = document.querySelector('form')
+  if (!form) return
 
- 	const form = document.getElementsByTagName('form')[0];
- 	
- 	const email = document.getElementById('email');
-	const emailError = document.getElementById('email-error');
+  const fields = {
+    name: {
+      el: document.getElementById('name'),
+      error: document.getElementById('name-error'),
+      msg: 'Field is required',
+    },
+    email: {
+      el: document.getElementById('email'),
+      error: document.getElementById('email-error'),
+      msg: 'Field is required (e.g. user@domain.com)',
+    },
+    message: {
+      el: document.getElementById('message'),
+      error: document.getElementById('message-error'),
+      msg: 'Field is required',
+    },
+  }
 
-	const name = document.getElementById('name')
-	const nameError = document.getElementById('name-error')
+  const EMAIL_REGEX =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-	const message = document.getElementById('message')
-	const messageError = document.getElementById('message-error')
+  const showError = ({ error, msg }) => {
+    error.classList.add('error')
+    error.textContent = msg
+  }
 
- 	form.noValidate = true; 
+  const clearError = ({ error }) => {
+    error.classList.remove('error')
+    error.textContent = ''
+  }
 
- 	const elements = form.elements
+  form.noValidate = true
 
- 	let isFormValid
-    let valid = {}
- 	let errors = {
- 		name: 'Field is required',
-	 	email: 'Field is required (e.g. user@domain.com)',
-	 	message: 'Field is required'
-	}
+  form.addEventListener('submit', (e) => {
+    let isValid = true
+    for (const key of Object.keys(fields)) {
+      const field = fields[key]
+      if (!field.el.validity.valid) {
+        showError(field)
+        isValid = false
+      } else {
+        clearError(field)
+      }
+    }
+    if (!isValid) e.preventDefault()
+  })
 
-	form.addEventListener('submit', function(e) {
+  fields.name.el?.addEventListener('input', () => {
+    if (fields.name.el.validity.valid) clearError(fields.name)
+  })
 
-	  	for (i = 0; i < (elements.length - 1); i++) {
-	  		valid[elements[i].id] = elements[i].validity.valid
-	  		if (!valid[elements[i].id]) {
-	  			showError(elements[i], errors[elements[i].id])
-	  		} else {
-	  			removeError(elements[i])
-	  		}
+  fields.email.el?.addEventListener('input', () => {
+    if (EMAIL_REGEX.test(fields.email.el.value)) clearError(fields.email)
+  })
 
-	  	}
-
-	    for (let field in valid) {
-	    	if (!valid[field]) {
-	    		isFormValid = false
-	    		break
-	    	}
-	    	isFormValid = true
-	    }
-
-	    if (!isFormValid) {
-	    	e.preventDefault()
-	    }
-	})
-
-	name.addEventListener('input', function(e) {
-    	if (name.validity.valid) {
-	        removeError(name)
-    	}
-	})
-
-	email.addEventListener('input', function(e) {
-		let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    	if (regex.test(email.value)) {
-         	removeError(email)
-     	}
- 	})
-
- 	message.addEventListener('input', function(e) {
-    	if (message.validity.valid) {
-	       removeError(message)
-    	}
-	})
-
-	const removeError = (el) => {
-
-		let errEl = el.nextElementSibling
-		errEl.classList.remove('error')
-		errEl.textContent = '' 
-	}
-
-	const showError = (el, msg) => {
-
-		let errEl = el.nextElementSibling
-		errEl.classList.add('error')
-		errEl.textContent = msg
-	}
-
-})();
+  fields.message.el?.addEventListener('input', () => {
+    if (fields.message.el.validity.valid) clearError(fields.message)
+  })
+}
